@@ -1,0 +1,12 @@
+///////// mixins
+@mixin strip-box {
+	margin:0;
+	padding:0;
+}
+@mixin cfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

@@ -1,0 +1,32 @@
+<nav class="main-navbar navbar shadow-sm fixed-top navbar-expand-lg ">
+  <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="/">It Cores</a>
+
+      <div class="d-flex gap-3 align-items-center">
+        
+        <div class="wrapper">
+          <input type="checkbox" name="theme_switch" id="theme_switch">
+          <label for="theme_switch"  class="theme-switch-label">Toggle theme</label>
+        </div>
+
+        <div class="dropdown btn-group ">
+          <button type="button" data-bs-auto-close="outside" class="btn dropdown-toggle btn-light btn-rounded btn-sm" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></button>
+          <div class="dropdown-menu dropdown-menu-end">
+            <div class="p-3">
+              Control app size.
+            </div>
+          <div class="dropdown-divider"></div>
+            <div class="p-3 control-size-container">
+              <span class="text-muted"><small>Font-Size: </small></span>
+              <ul class="controled-size">
+                <li data-target-size="small" class="font-small list-inline-item">A</li>
+                <li data-target-size="medium" class="font-medium list-inline-item">A</li>
+                <li data-target-size="large" class="font-large list-inline-item">A</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+  </div>
+</nav>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr" data-mode="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{% if title %} {{ title }} {% else %} ItCores {% endif %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fonts/fontawesome-free-6.4.2-web/css/all.min.css" />
+    {% if devBuild %}
+    <link rel="stylesheet" href="css/style.css" />
+    {% else %}
+    <link rel="stylesheet" href="css/style.min.css" />
+    {% endif %}
+    <!-- scripts -->
+    <script>
+      ;(function (e, t, n) {
+        var r = e.querySelectorAll("html")[0]
+        r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
+      })(document, window, 0)
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+      <div class="page-wrapper">
+      {% include 'partials/header.html' %} 
+      <main class="page-content">
+         {% block content %} {% endblock %} 
+      </main>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.bundle.min.js" integrity="sha512-ToL6UYWePxjhDQKNioSi4AyJ5KkRxY+F1+Fi7Jgh0Hp5Kk2/s8FD7zusJDdonfe5B00Qw+B8taXxF6CFLnqNCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    {% if devBuild %}
+    <script src="js/app.js"></script>
+    {% else %}
+    <script src="js/app.min.js"></script>
+    {% endif %}
+  </body>
+</html>

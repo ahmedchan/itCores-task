@@ -1,0 +1,67 @@
+<!-- extend from layout -->
+{% extends "layout.html" %}
+<!-- setting title meta for index page -->
+{% set title = 'It-Cores: Login' %}
+
+<!-- main index page content -->
+{% block content %}
+<div class="container-fluid ">
+   <div class="row justify-content-md-center ">
+      <div class="col-sm-12 col-md-8 col-lg-4  ">
+         <div class="shadow-sm login-container rounded">
+         <h3>Sign In</h3>
+         <span>Please fill in this form to create an account.</span>
+
+         <!-- seperator -->
+         <div class="my-4 border border-top-0"></div>
+
+         <!-- start form element -->
+         <form method="POST" action="" id="register-form">
+            <fieldset>
+               <!-- email -->
+               <div class="mb-4">
+                  <label for="emailInput" class="form-label">Enter Email</label>
+                  <input data-validator-required="Email field is required!" data-validator-email="Please, provide a valid Email" autocomplete="off" type="email" class="form-control" id="emailInput" placeholder="Enter Email">
+                  <div class="invalid-feedback"></div>
+               </div>
+
+               <!-- password -->
+               <div class="mb-4">
+                  <label for="passwordInput" class="form-label">Password</label>
+                  <input data-validator-required="Password field is required field!" autocomplete="off" type="password" class="form-control" id="passwordInput" placeholder="Enter Password">
+                  <div class="invalid-feedback"></div>
+               </div>
+
+               <!-- repeat password -->
+               <div class="mb-4">
+                  <label for="repeatPasswordInput" class="form-label">Repeat Password</label>
+                  <input data-validator-required="Repeated password field is required!" data-validator-repeat-pass="Your repeated password does't match your password!" autocomplete="off" type="password" class="form-control" id="repeatPasswordInput" placeholder="Repeat Password">
+                  
+               </div>
+
+               <!-- checkbox remember me -->
+               <div class="mb-4">
+                  <div class="custom-checkbox">
+                     <label>
+                        <input type="checkbox" value="" checked>
+                        <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                        Remember Me
+                     </label>
+                  </div>
+                  <div class="form-text">
+                  By creating an account, you agree with our <a href="#">Terms &amp; Policy</a>
+                  </div>
+               </div>
+            </fieldset>
+
+            <div class="mt-3 d-flex p-1 justify-content-between flex-column">
+               <button type="button" role="dismiss" class="mb-2 btn  btn-danger">Cancel</button>
+               <button type="submit" role="submitation-register" class="btn  btn-primary">Sign up</button>
+            </div>   
+         </form>
+
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock content %}

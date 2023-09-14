@@ -1,0 +1,103 @@
+
+.navbar-brand {
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size:inherit;
+   color: var(--black);
+}
+
+.text-muted {
+   color: var(--text-muted) !important;
+}
+
+// borders
+.border {
+   border-color: var(--border-color) !important;
+}
+
+// forms and labels
+.form-label {
+   margin-bottom: 0.3rem;
+   font-weight: 500;
+}
+.form-text {
+   color: inherit;
+}
+// .form-control
+.form-control {
+   background-color: var(--input-background);
+   border-color: var(--input-border-color);
+   border-radius: 0;
+   padding: 0.675rem .75rem;
+   color:  var(--text-color);
+
+   &:focus {
+      box-shadow: none;
+      background-color: var(--white);
+      color:  var(--text-color);
+   }
+
+   // placeholder
+   &::-webkit-input-placeholder {
+      color: var(--placeholder-color);
+   }
+   &:-moz-placeholder {
+      color: var(--placeholder-color);
+   }
+   &::placeholder{
+      color: var(--placeholder-color);
+   }
+}
+
+// .dropdown-menu
+.dropdown-menu {
+   background-color: var(--white);
+   color: var(--text-color);
+
+   .dropdown-divider {
+      border-color: var(--border-color);
+   }
+   
+   .dropdown-item {
+      color: inherit;
+   }
+}
+
+// .btn 
+.btn {
+   border-radius: 0;
+   font-size: inherit;
+   background-color: transparent;
+   border-color: transparent;
+   color: var(--text-color);
+
+   &:hover, &:focus, &:active {
+      color: var(--text-color);
+      background-color: var(--gray-color-1) !important;
+      border-color: var(--gray-color-1) !important
+   }
+}
+
+// btn primary
+.btn-primary {
+   background-color: var(--primary-color);
+   border-color: var(--primary-color);
+   color: var(--white)  !important;
+
+   &:hover, &:focus, &:active {
+      background-color: var(--primary-hover-color) !important;
+      color: var(--white)  !important;
+   }
+}
+
+// btn-danger
+.btn-danger{
+   background-color: var(--danger-color);
+   border-color: var(--danger-color);
+   color: var(--white)  !important;
+
+   &:hover, &:focus, &:active {
+      background-color: var(--danger-color) !important;
+      color: var(--white) !important;
+   }
+}
